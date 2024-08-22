@@ -1,0 +1,8 @@
+{{- include "adp-helm-library.deployment" (list . "adp-test-dan.deployment") -}}
+{{- define "adp-test-dan.deployment" -}}
+spec:
+  template:
+    spec:
+      containers:
+      - {{ include "adp-helm-library.container" (list . "adp-test-dan.container") }}
+{{- end -}}
